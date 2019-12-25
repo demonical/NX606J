@@ -1,3 +1,9 @@
+WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! 
+WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! 
+!!!do not    flash! do not    flash!do not    flash!do not    flash!do not    flash!!!!!!
+WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! 
+WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! WARNING ! 
+
 Copyright (C) 2019 - The MoKee Open Source Project
 
 Device configuration for ZTE Nubia Z18 NX606J

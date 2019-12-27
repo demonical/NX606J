@@ -15,7 +15,9 @@
 /modem          emmc    /dev/block/bootdevice/by-name/modem         flags=backup=1;display="Modem"
 /bluetooth      emmc    /dev/block/bootdevice/by-name/bluetooth     flags=backup=1;subpartitionof=/modem
 /dsp            emmc    /dev/block/bootdevice/by-name/dsp           flags=backup=1;subpartitionof=/modem
-/devinfo        emmc    /dev/block/bootdevice/by-name/devinfo       flags=backup=1;subpartitionof=/modem
+
+#Device Configuration
+/devinfo        emmc    /dev/block/bootdevice/by-name/devinfo       flags=backup=1;display="DEV cfg"
 
 # EFS
 /efs1           emmc    /dev/block/bootdevice/by-name/modemst1      flags=backup=1;display="EFS"
@@ -24,11 +26,13 @@
 /efsg           emmc    /dev/block/bootdevice/by-name/fsg           flags=backup=1;subpartitionof=/efs1
 
 # Calibration
-/persist        emmc    /dev/block/bootdevice/by-name/persist       flags=backup=1;display="Persist"
+/persist        emmc    /dev/block/bootdevice/by-name/persist       flags=backup=1;flashimg=1;display="Persist"
 
 # Bootloader
-/xbl            emmc    /dev/block/bootdevice/by-name/xbl           flags=backup=1;display="Bootloader"
-/abl            emmc    /dev/block/bootdevice/by-name/abl           flags=backup=1;subpartitionof=/xbl
+######## !!!! CAREFULL HERE !!!! added flags to be flashable with reason ;)
+/xbl            emmc    /dev/block/bootdevice/by-name/xbl           flags=backup=1;flashimg=1;display="Bootloader"
+/xbl_config     emmc    /dev/block/bootdevice/by-name/xbl_config    flags=backup=1;flashimg=1;display="Bootloader Configuration"/xbl;
+/abl            emmc    /dev/block/bootdevice/by-name/abl           flags=backup=1;flashimg=1;subpartitionof=/xbl;
 
 # Removable storage
 /usb-otg        vfat    /dev/block/sdg1         /dev/block/sdg      flags=fsflags=utf8;display="USB Storage";storage;removable
